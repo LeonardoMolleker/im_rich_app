@@ -7,7 +7,7 @@ class ImRichPage extends StatelessWidget {
 
   ImRichPage({
     this.firstText = "You found one of the most valuable diamonds in the world",
-    this.secondText = "You are rich!"
+    this.secondText = "You are rich!",
   });
 
   @override
@@ -41,7 +41,7 @@ class ImRichPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: Constants.fontSize,
-                  fontFamily: 'Pattaya'
+                  fontFamily: 'Pattaya',
                 ),
               ),
             ),
@@ -61,10 +61,9 @@ class ImRichPage extends StatelessWidget {
                       Shadow(
                         color: Colors.yellowAccent,
                         blurRadius: 1.0,
-                        offset: Offset(-3.0, 2.0)
+                        offset: Offset(-3.0, 2.0),
                       )
-                    ]
-                ),
+                    ]),
               ),
             )
           ],
