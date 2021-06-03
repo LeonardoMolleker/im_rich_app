@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:i_am_rich_app/src/constants/constants.dart';
+import '../constants/constants.dart';
 
 class ImRichPage extends StatelessWidget {
   final String firstText;
@@ -19,8 +19,8 @@ class ImRichPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: Constants.height,
-              width: Constants.width,
+              height: Constants.principalContainerheight,
+              width: Constants.principalContainerwidth,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.fill,
@@ -30,40 +30,47 @@ class ImRichPage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.only(
+            Padding(
+              padding: const EdgeInsets.only(
                 top: Constants.padding,
                 left: Constants.padding,
                 right: Constants.padding,
               ),
-              child: Text(
-                this.firstText,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: Constants.fontSize,
-                  fontFamily: 'Pattaya',
+              child: Container(
+                child: Text(
+                  this.firstText,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: Constants.textFontSize,
+                    fontFamily: 'Pattaya',
+                  ),
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.only(
+            Padding(
+              padding: const EdgeInsets.only(
                 top: Constants.padding,
                 left: Constants.padding,
                 right: Constants.padding,
               ),
-              child: Text(
-                this.secondText,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: Constants.fontSize,
-                    fontFamily: 'Pattaya',
-                    shadows: [
-                      Shadow(
-                        color: Colors.yellowAccent,
-                        blurRadius: 1.0,
-                        offset: Offset(-3.0, 2.0),
-                      )
-                    ]),
+              child: Container(
+                child: Text(
+                  this.secondText,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: Constants.textFontSize,
+                      fontFamily: 'Pattaya',
+                      shadows: [
+                        Shadow(
+                          color: Colors.yellowAccent,
+                          blurRadius: Constants.shadowBlurRadius,
+                          offset: Offset(
+                            Constants.shadowOffsetX,
+                            Constants.shadowOffsetY,
+                          ),
+                        )
+                      ]),
+                ),
               ),
             )
           ],
