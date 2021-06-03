@@ -1,4 +1,4 @@
-abstract class Constants{
+abstract class Constants {
   static const double principalContainerheight = 190.0;
   static const double principalContainerwidth = 300.0;
   static const double padding = 25.0;
